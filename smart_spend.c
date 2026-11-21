@@ -4,7 +4,7 @@
 #define MAX_EXPENSES 100
 #define NUM_CATEGORIES 5
 
-// MEMBER 2: Expense data
+
 char categoryNames[5][15] = {
     "Food", "Transport", "Entertainment", "Bills", "Other"
 };
@@ -15,7 +15,7 @@ float expAmount[100];
 float categoryTotals[5] = {0};
 int expenseCount = 0;
 
-// MEMBER 2: Record expense
+
 void recordExpense(char description[], int category, float amount) {
     if (expenseCount >= MAX_EXPENSES) {
         printf("Expense list is full!\n");
@@ -35,7 +35,7 @@ void recordExpense(char description[], int category, float amount) {
     printf("Expense added successfully!\n");
 }
 
-// MEMBER 2: Calculate category totals
+
 void calculateCategoryTotals() {
     int i;
 
@@ -46,7 +46,7 @@ void calculateCategoryTotals() {
         categoryTotals[expCategory[i]] += expAmount[i];
 }
 
-// MEMBER 2: Calculate overall total
+
 float calculateOverallTotal() {
     float total = 0;
     int i;
@@ -57,7 +57,7 @@ float calculateOverallTotal() {
     return total;
 }
 
-// MEMBER 2: Find highest spending category
+
 int findHighestCategory() {
     int i, highest = 0;
 
@@ -72,7 +72,7 @@ int findHighestCategory() {
     return highest;
 }
 
-// MEMBER 3: Check budget
+
 void checkBudget(float budget, float totalExpenses) {
     float remaining = budget - totalExpenses;
 
@@ -89,7 +89,7 @@ void checkBudget(float budget, float totalExpenses) {
         printf("Your expenses are under control.\n");
 }
 
-// MEMBER 3: Show report
+
 void showReport(float budget, float expenses[], float totalSpent) {
     int i, highest = 0;
 
@@ -117,7 +117,7 @@ void showReport(float budget, float expenses[], float totalSpent) {
     checkBudget(budget, totalSpent);
 }
 
-// MEMBER 1: Main program and menu
+
 int main() {
     float budget, amount, total;
     int choice = 0, category, i;
